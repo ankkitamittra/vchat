@@ -1,0 +1,31 @@
+#chatView {
+    height: 500px;
+    background: white;
+}
+
+#userListView {
+    height: 700px;
+}
+
+#chatBox {
+    height: 700px;
+}
+
+.chats {
+    background: #d9edf7;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+#messageBox {
+    height: 200px;
+}
+
+#msg {
+    height: 90px;
+}
+
+ul {
+    list-style-type: none;
+}

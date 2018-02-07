@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="col-sm-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Online Users <span class="badge pull-right">{{userList.length}}</span></h3>
+            </div>
+            <div class="panel-body" id="userListView">
+                <div *ngFor="let userList of userList">
+                    <div [ngClass]="userList.statClass" (click)="openChat(userList.loggedUsers)">
+                        <strong>{{userList.loggedUsers}}</strong>
+                        <span class="label pull-right label-info" *ngIf="userList.statClass == 'alert alert-warning'">New!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-9">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"> {{startChatMsg}} <b>{{friend}}</b></h3>
+            </div>
+            <div class="panel-body" id="chatBox">
+                <div class="well" id="chatView">
+                    <div class="row " *ngFor="let chats of data">
+                        <div [ngClass]="(chats.username == accountUser) ? 'col-sm-6 col-sm-offset-6 chats':'col-sm-6 chats'">{{chats.messages}}</div>
+                    </div>
+                </div>
+                <div class="form-group" id="messageBox">
+                    <label for="msg">Type Message</label>
+                    <input class="form-control" id="msg" [disabled]="openChatBox" [ngModel]="message" [value]="message" (input)="message = $event.target.value" />
+                    <p></p>
+                    <button class="btn btn-success" [disabled]="openChatBox" (click)="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
