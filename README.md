@@ -2,6 +2,23 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
 
+## Run the application
+To run the program run `ng build && node ./bin/www`, 
+use this if `ng` gives error before using ng command -> ` alias ng="./node_modules/@angular/cli/bin/ng" `
+
+## MongoDb setup
+Download mongodb
+Then create a folder mongodb/data/db
+
+go to location download mongodb and then go to bin open terminal
+Run ` ./mongod --dbpath <mongodbpath> `
+eg. -> ` ./mongod --dbpath /Users/ankmitra/Documents/PROJECT_WORK/Mongodb/ `
+
+Then Run ` ./mongo `
+mongo prompt opens then setup the db and collection for application
+` use vchatdb `
+` db `
+` db.createCollection("userAccountDetails") `
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
