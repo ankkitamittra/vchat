@@ -6,7 +6,7 @@ var userAccountDetails = require('./models/userDetails');
 //var db = 'mongodb://localhost:27017/vchatdb';
 var db = 'mongodb://dbuser:dbuser@ds245615.mlab.com:45615/codepost';
 mongoose.Promise = global.Promise;
-mongoose.connect(db);
+mongoose.connect(db,{ useNewUrlParser: true });
 var conn = mongoose.connection;
 
 
