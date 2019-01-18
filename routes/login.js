@@ -2,11 +2,11 @@ var express = require('express');
 var mongoose = require('mongoose');
 
 var userAccountDetails = require('./models/userDetails');
-//const db = "mongodb://vchatdbuser:vchatdbpwd@ds129156.mlab.com:29156/vchatdb";
-//var db = 'mongodb://dbuser:dbuser@ds245615.mlab.com:45615/codepost';
+//mlab mongodb 
+var db = "mongodb://vchatuser:123456a@ds139446.mlab.com:39446/gwgvchatdb";
 
 //local mongodb setup
-var db = 'mongodb://localhost:27017/vchatdb';
+//var db = 'mongodb://localhost:27017/vchatdb';
 mongoose.Promise = global.Promise;
 mongoose.connect(db,{ useNewUrlParser: true });
 var conn = mongoose.connection;
