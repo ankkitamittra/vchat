@@ -3,8 +3,10 @@ var mongoose = require('mongoose');
 
 var userAccountDetails = require('./models/userDetails');
 //const db = "mongodb://vchatdbuser:vchatdbpwd@ds129156.mlab.com:29156/vchatdb";
-//var db = 'mongodb://localhost:27017/vchatdb';
-var db = 'mongodb://dbuser:dbuser@ds245615.mlab.com:45615/codepost';
+//var db = 'mongodb://dbuser:dbuser@ds245615.mlab.com:45615/codepost';
+
+//local mongodb setup
+var db = 'mongodb://localhost:27017/vchatdb';
 mongoose.Promise = global.Promise;
 mongoose.connect(db,{ useNewUrlParser: true });
 var conn = mongoose.connection;
