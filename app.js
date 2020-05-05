@@ -33,7 +33,10 @@ app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error');
 });
-
+app.use(express.static(${__dirname}/dist/));
+app.get('*', (req, res) => {
+    res.sendFile(`./dist/index.html`); // load the single view file (angular will handle the page changes on the front-end)
+});
 const PORT = process.env.PORT || 4200;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}.`));
 module.exports = app;
