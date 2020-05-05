@@ -7,7 +7,8 @@
     "start": "node app",
     "client": "ng build",
     "dev": "ng build && node app",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run client && npm run start",
+    "build": "ng build",
+    "postinstall": "ng build --aot --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
