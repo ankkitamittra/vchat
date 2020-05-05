@@ -8,7 +8,7 @@ var db = "mongodb://ankita:ankita123@ds139446.mlab.com:39446/gwgvchatdb";
 //local mongodb setup
 //var db = 'mongodb://localhost:27017/vchatdb';
 mongoose.Promise = global.Promise;
-mongoose.connect(db,{ useNewUrlParser: true });
+mongoose.connect(db,{ useNewUrlParser: true, useUnifiedTopology: true });
 var conn = mongoose.connection;
 
 
