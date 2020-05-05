@@ -5,6 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng build && node ./bin/www",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install ng build && node ./bin/www"
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
