@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 
 var userAccountDetails = require('./models/userDetails');
 //mlab mongodb 
-var db = "mongodb://vchatuser:123456a@ds139446.mlab.com:39446/gwgvchatdb";
+var db = "mongodb://ankita:ankita123@ds139446.mlab.com:39446/gwgvchatdb";
 
 //local mongodb setup
 //var db = 'mongodb://localhost:27017/vchatdb';
