@@ -4,8 +4,10 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng build && node ./bin/www",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --no-audit && ng build && node ./bin/www",
+    "start": "node ./bin/www",
+    "client": "ng build --prefix client",
+    "dev": "ng build && node ./bin/www",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
