@@ -4,9 +4,9 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "node ./bin/www",
+    "start": "node app",
     "client": "ng build",
-    "dev": "ng build && node ./bin/www",
+    "dev": "ng build && node app",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run client && npm run start",
     "test": "ng test",
     "lint": "ng lint",
