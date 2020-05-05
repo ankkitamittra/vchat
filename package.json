@@ -5,9 +5,9 @@
   "scripts": {
     "ng": "ng",
     "start": "node ./bin/www",
-    "client": "ng build --prefix client",
+    "client": "ng build",
     "dev": "ng build && node ./bin/www",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run client && npm run start",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
