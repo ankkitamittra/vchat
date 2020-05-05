@@ -4,13 +4,12 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "node app.js",
-    "dev": "ng build && node app.js",
-    "build": "ng build",
-    "heroku-postbuild": "ng build --prod",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot",
+    "start": "node app.js"
   },
   "private": true,
   "dependencies": {
